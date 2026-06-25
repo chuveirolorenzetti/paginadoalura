@@ -8,6 +8,10 @@
     font-family: 'Fredoka', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth; /* Faz a rolagem ser suave ao clicar nos botões */
+}
+
 body {
     background: linear-gradient(135deg, #ffdee9 0%, #b5fffc 100%);
     min-height: 100vh;
@@ -80,8 +84,10 @@ header p {
     margin-bottom: 20px;
 }
 
-/* Botões dos Cards */
+/* Botões dos Cards (Convertidos para links funcionais) */
 .btn-interativo {
+    display: inline-block;
+    text-decoration: none;
     background-color: #6c5ce7;
     color: white;
     border: none;
@@ -104,6 +110,40 @@ header p {
     box-shadow: 0 0px 0px #4834d4;
 }
 
+/* Estilização das novas seções de detalhes */
+.container-detalhes {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.detalhe-item {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-left: 8px solid #6c5ce7;
+    scroll-margin-top: 30px; /* Evita que o topo da seção fique colado na tela ao rolar */
+}
+
+#secao-pirulitos { border-left-color: #ff4a85; }
+#secao-cupcakes { border-left-color: #ffa4b4; }
+#secao-chocolates { border-left-color: #6c5ce7; }
+
+.detalhe-item h2 {
+    color: #4a4a4a;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.detalhe-item p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
 /* Seção Especial da Fini */
 .secao-fini {
     text-align: center;
@@ -111,7 +151,7 @@ header p {
     padding: 40px;
     border-radius: 30px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     border: 3px dashed #ff4a85;
 }
 
